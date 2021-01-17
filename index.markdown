@@ -17,7 +17,7 @@ Hi there, I am Tangaoo, an Linux/DSP/C programmer. This site is dedicated to pro
 
 <ul>
 
-<li><a href="http://github.com/happypeter/">Github</a></li>
+<li><a href="http://github.com/tangaoo/">Github</a></li>
 
 </ul>
 <p><br /><b>Contact Information:</b></p>
