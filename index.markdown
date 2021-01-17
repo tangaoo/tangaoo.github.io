@@ -3,9 +3,7 @@ layout: default
 title: Tangaoo's Corner
 ---
 
-Hi there, I am Tangaoo, an Linux/DSP/C programmer. 
-
-This site is dedicated to providing notes of my work.
+Hi there, I am Tangaoo, an Linux/DSP/C programmer. This site is dedicated to providing notes of my work.
 
 
 <p><br /><b>My Blog:</b></p>
