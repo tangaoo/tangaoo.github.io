@@ -1,4 +1,10 @@
-auto        : false
-lsi         : false
-permalink   : none
-markdown    : kramdown
+#auto        : false
+#lsi         : false
+#permalink   : none
+#markdown    : kramdown
+highlighter: pygments
+markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
+kramdown:
+  input:         GFM
+  auto_ids:      true
+  auto_id_prefix:'id-'
