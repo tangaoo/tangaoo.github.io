@@ -1,4 +1,10 @@
-auto        : false
-lsi         : false
-permalink   : none
-markdown    : kramdown
+# auto        : false
+# lsi         : false
+# permalink   : none
+# markdown    : kramdown
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
