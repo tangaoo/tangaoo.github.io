@@ -7,4 +7,4 @@ markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:
   input:         GFM
   auto_ids:      true
-  auto_id_prefix:'id-'
+  auto_id_prefix: 'id-'
