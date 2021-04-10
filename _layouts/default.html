@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="/css/typo.css" />
-    <link rel="stylesheet" type="text/css" href="/css/peter.css" />
-    <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://tangaoo.github.io/favicon.ico"
-    />
-    <title>TangaooCorner</title>
-  </head>
-  <div id="navbar">
-    <a href="http://tangaoo.github.com/index.html">HOME</a> &nbsp;
-  </div>
-  <div id="wrapper" class="typo">
-    <h1 style="text-align:center; margin-bottom: 0;">{{ page.title }}</h1>
-    <br />
-    {{ content }}
-    <br />
-  </div>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+        {{ content }}
+
+    {% include footer.html %}
+    {% include backToTop.html %}
+    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script src="{{ " /js/smooth-scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+  </body>
+
 </html>
