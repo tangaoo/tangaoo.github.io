@@ -11,7 +11,7 @@ type: page
 
 ## 关于我
 
-Hi there, I am Tangaoo, an Linux/DSP/C programmer. This site is dedicated to providing notes of my work.
+    Hi there, I am Tangaoo, an Linux/DSP/C programmer. This site is dedicated to providing notes of my work.
 
 ## 联系我
 
