@@ -9,9 +9,17 @@ type: page
 * content
 {:toc}
 
+## Linux
+
+* [Make 命令教程](https://www.ruanyifeng.com/blog/2015/02/make.html) 
+
 ## 工具
 
-- [tiny png](https://tinypng.com/)
+* [Kramdown 语法参考](https://kramdown.gettalong.org/quickref.html) 
+
+    Kramdown 主要用在 JeKyll 中。
+
+* [tiny png](https://tinypng.com/)
 
     用于压缩 png 或 jpg 的在线工具
 
@@ -42,6 +50,10 @@ type: page
 * [Masonry](http://masonry.desandro.com/)
 
     瀑布流布局库。
+
+* [zlog](https://hardysimpson.github.io/zlog/UsersGuide-CN.html)
+
+   `zlog` 是一个高可靠性、高性能、线程安全、灵活、概念清晰的纯C日志函数库。
 
 ## other articles
 
@@ -120,6 +132,10 @@ Syntax Theme: Atom Dark or One Dark
 * [JS前端开发群月报 -豪情等人维护](http://www.kancloud.cn/jsfront/month/82796)
 
 ## Books
+
+* [TLCL(快乐命令行)](http://billie66.github.io/TLCL/book/) 
+
+    一本介绍Linux的命令行的书籍，中英双文。
 
 ## Comments
 
