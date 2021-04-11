@@ -13,6 +13,10 @@ type: page
 
 * [Make 命令教程](https://www.ruanyifeng.com/blog/2015/02/make.html) 
 
+* [sed 命令教程](https://www.runoob.com/linux/linux-comm-sed.html)
+
+    Linux sed 命令是利用脚本来处理文本文件。
+
 ## 工具
 
 * [Kramdown 语法参考](https://kramdown.gettalong.org/quickref.html) 
