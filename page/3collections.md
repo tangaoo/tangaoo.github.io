@@ -99,7 +99,11 @@ Syntax Theme: Atom Dark or One Dark
 
 ## Other blogs
 
-- [COLORFUL xiaoa](http://www.xiaoa.name/)
+* [阮一峰的个人网站](http://www.ruanyifeng.com/home.html)
+
+* [酷壳](https://coolshell.cn/)
+
+* [COLORFUL xiaoa](http://www.xiaoa.name/)
 
 * [进击的马斯特 http://pinkyjie.com/](http://pinkyjie.com/)
 
