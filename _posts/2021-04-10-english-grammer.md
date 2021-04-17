@@ -46,14 +46,20 @@ This is a note of English grammer.
     * tomatoes
     * volcanoes
 
-```flow
-s=start:开始
-e=end:结束
-o=operation:操作项
+## 3. Possessive Pronouns
 
-s-o-e
-```
+* Mine, Yours, His, Hers, Its, Ours, Theirs
 
+## 4. Articles + noun
+  
+* a/an
+    * any one thing
+    * first time
+
+* the
+    * specific thing
+    * second time
+    * one and only
 
 
 
