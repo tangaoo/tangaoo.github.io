@@ -27,6 +27,8 @@ CFS mean the completely fail scheduler, and it’s the standard scheduler of Lin
 
 ![alt text](https://github.com/tangaoo/tangaoo.github.io/blob/master/image/2021-04-17-multi-core-scheduling-1-1.png "Figure1-1  CFS Assigning Tasks")
 
+![My helpful screenshot](https://raw.githubusercontent.com/tangaoo/tangaoo.github.io/master/image/2021-04-17-multi-core-scheduling-1-1.png)
+
 ## 2. EAS 
 
 EAS is an enhanced scheduler base on CFS and is for obtaining lower power consumption. the EAS assigns heavy-load tasks to the Cortex-A57s and low-load tasks to the Cortex-A53s, EAS applies control so that only the Cortex-A53 cores operate and places the Cotex-A57 cores in the idle state while no heavy-load tasks are running. Namely, EAS handles a kind of low power consumption mode for multi-core processing. In addition, EAS need Energy Model.(see in Figure1-2)
