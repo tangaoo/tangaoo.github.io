@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Multi-core Scheduling"
-categories: sth
-tags:  sth
+categories: Linux
+tags:  Scheduling
 author: tangoo
 mathjax: true
 ---
@@ -25,7 +25,7 @@ there are many Scheduling way in mutlti-core environment, such as CFS, EAS, CAS
 
 CFS mean the completely fail scheduler, and it’s the standard scheduler of Linux. The CFS assigns tasks to CPUs such that the load on each CPU is equal. Operation of the CFS is on the assumption of a symmetric multiprocessing(SMP) architecture, so its operation is not suitable in an big.LITTLE architecture like Renesas integrated the Cortex-A57 and the Cortex-A53 cores at the same time.(see in Figure1-1)
 
-![alt text](../image/2021-04-17-multi-core-scheduling-1-1.png "Figure1-1  CFS Assigning Tasks")
+![alt text](https://github.com/tangaoo/tangaoo.github.io/blob/master/image/2021-04-17-multi-core-scheduling-1-1.png "Figure1-1  CFS Assigning Tasks")
 
 ## 2. EAS 
 
