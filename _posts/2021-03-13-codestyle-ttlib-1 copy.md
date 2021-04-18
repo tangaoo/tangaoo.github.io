@@ -33,7 +33,7 @@ mathjax: true
 
 所有常用类型都重新 `typedef` 了，主要还是为避免冲突。
 
-~~~ c
+~~~cpp
     typedef signed int                  tt_int_t;
     typedef unsigned int                tt_uint_t;
     typedef signed short                tt_short_t;
@@ -62,7 +62,7 @@ mathjax: true
 
 结构体命名格式为 `tt_xxx_t` ， `tt_xxx_ref_t` ， `ref` 表结构体指针，具体看下面例子就明白了。
 
-~~~ c
+~~~cpp
     typedef union __tt_ipv4_t
     {
         // u32, little endian
