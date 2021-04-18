@@ -61,6 +61,111 @@ Linux 的调度策略主要包括 SCHED_OTHER、SCHED_RR、SCHED_FIFO。
 * 如果存在与调用进程的优先级相同的其他排队的可运行进 程，那么调用进程会被放在队列的队尾，队列中队头的进程将会被调度使用 CPU。
 * 如果在该优先级队列中不存在可运行的进程，那么 sched_yield()不会做任何事情，调用进程会继续使用 CPU。
 
-## 6. 代码实践
+## 6. 对于线程
+
+* 线程也具有上述特性，因为线程是调度单位，也可以继承进程特性。
+
+## 7. 代码实践
+* 运行时，要给 sudo权限。
+* 需要手动把这两个线程绑定到同一个核上面。（多核环境的话）
+* 主线程打印任然有效地原因时，非实时线程任然有5%的 CPU使用权，原因如下：
+  * `/proc/sys/kernel/sched_rt_period_us` 默认值为 1000000，代表 CPU运行时间宽度。
+  * `/proc/sys/kernel/sched_rt_runtime_us` 默认值为 950000，代表实时线程运行时间宽度。也就是非实时线程还有 5%的 CPU。如果把该值设置 -1，则实时线程会占满。 
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#define __USE_GNU
+#include <pthread.h>
+#include <sched.h>
+
+long long a = 0;
+long long b = 0;
+
+int attach_cpu(int cpu_index)
+{
+    int cpu_num = sysconf(_SC_NPROCESSORS_CONF);
+    if (cpu_index < 0 || cpu_index >= cpu_num)
+    {
+        printf("cpu index ERROR!\n");
+        return -1;
+    }
+
+    cpu_set_t mask;
+    CPU_ZERO(&mask);
+    CPU_SET(cpu_index, &mask);
+
+    if (pthread_setaffinity_np(pthread_self(), sizeof(mask), &mask) < 0)
+    {
+        printf("set affinity np ERROR!\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+void *thread1(void *param)
+{
+    attach_cpu(0);
+
+    long long i;
+    for (i = 0; i < 10000000000; i++)
+    {
+        a++;
+    }
+}
+
+void *thread2(void *param)
+{
+    attach_cpu(0);
+
+    long long i;
+    for (i = 0; i < 10000000000; i++)
+    {
+        b++;
+    }
+}
+
+int main()
+{
+    pthread_t t1;
+    pthread_t t2;
+
+    int policy;
+    struct sched_param param;
+
+    if (pthread_create(&t1, NULL, thread1, NULL) < 0)
+    {
+        printf("create t1 failed!\n");
+        return -1;
+    }
+
+    param.sched_priority = 10;
+    policy = SCHED_FIFO;
+    pthread_setschedparam(t1, policy, &param);
+
+    if (pthread_create(&t2, NULL, thread2, NULL) < 0)
+    {
+        printf("create t2 failed!\n");
+        return -1;
+    }
+
+    param.sched_priority = 11;
+    policy = SCHED_FIFO;
+    pthread_setschedparam(t2, policy, &param);
+
+    while (1)
+    {
+        printf("a=%lld, b=%lld\n", a, b);
+        sleep(1);
+    }
+
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
+
+    return 0;
+}
+```
 
 {% endraw %}
