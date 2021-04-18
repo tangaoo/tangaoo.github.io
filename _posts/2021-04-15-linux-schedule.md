@@ -72,7 +72,7 @@ Linux 的调度策略主要包括 SCHED_OTHER、SCHED_RR、SCHED_FIFO。
   * `/proc/sys/kernel/sched_rt_period_us` 默认值为 1000000，代表 CPU运行时间宽度。
   * `/proc/sys/kernel/sched_rt_runtime_us` 默认值为 950000，代表实时线程运行时间宽度。也就是非实时线程还有 5%的 CPU。如果把该值设置 -1，则实时线程会占满。 
 
-```C
+``` c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
