@@ -19,6 +19,10 @@ type: page
 
 ## 工具
 
+* lookbusy
+
+    一个模拟负载、内存使用率、IO等的工具。
+
 * [Kramdown 语法参考](https://kramdown.gettalong.org/quickref.html) 
 
     Kramdown 主要用在 JeKyll 中。
