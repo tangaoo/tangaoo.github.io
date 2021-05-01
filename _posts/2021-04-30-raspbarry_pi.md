@@ -53,6 +53,8 @@ Raspbarry Pi 开箱指南记录。
 
 * 在 boot目录下，新建一个文件，命名为 ssh 即可。
 
-
-
+## 4. 基本配置（命令行）
+```
+  sudo raspi-config
+```
 {% endraw %}
