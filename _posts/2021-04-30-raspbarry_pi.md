@@ -57,4 +57,11 @@ Raspbarry Pi 开箱指南记录。
 ```
   sudo raspi-config
 ```
+
+## 5. 查看 raspbarry pi 引脚
+```
+  pinout
+```
+
+
 {% endraw %}
