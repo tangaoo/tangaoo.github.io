@@ -63,5 +63,8 @@ Raspbarry Pi 开箱指南记录。
   pinout
 ```
 
+## 6. 编译替换内核
+* [参考链接](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
+
 
 {% endraw %}
