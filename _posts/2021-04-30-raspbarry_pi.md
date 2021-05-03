@@ -54,17 +54,29 @@ Raspbarry Pi 开箱指南记录。
 * 在 boot目录下，新建一个文件，命名为 ssh 即可。
 
 ## 4. 基本配置（命令行）
+
 ```
   sudo raspi-config
 ```
 
 ## 5. 查看 raspbarry pi 引脚
+
 ```
   pinout
 ```
 
 ## 6. 编译替换内核
+
+* [官方内核编译参考](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
 * [参考链接](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
+
+## 7. 打实时补丁
+
+* [参考链接](https://lemariva.com/blog/2019/09/raspberry-pi-4b-preempt-rt-kernel-419y-performance-test)
+* [已编译完成二进制包](https://github.com/lemariva/RT-Tools-RPi/tree/master/preempt-rt/kernel_4_19_59-rt23-v7l%2B)
+* 跑 `sudo cyclictest --mlockall --smp --priority=80 --interval=200 --distance=0`
+  * 未打实时补丁，max 达到 400us
+  * 打实时补丁，max 达到 93us
 
 
 {% endraw %}
