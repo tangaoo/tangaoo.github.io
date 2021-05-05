@@ -77,7 +77,8 @@ Raspbarry Pi 开箱指南记录。
 * 跑 `sudo cyclictest --mlockall --smp --priority=80 --interval=200 --distance=0`
   * 未打实时补丁，max 达到 400us
   * 打实时补丁，max 达到 93us
-  * 打了实时补丁后，明显感觉到相同任务情况下，CPU 占有率变高了不少。
+  * 打了实时补丁后，明显感觉到相同任务情况下，CPU 占有率变高了不少，也就是整个吞吐量下降了。
+* 打了实时补丁后，查看 menuconfig，会发现有 `Fully Preemptile Kernel` 选项。
 
 
 {% endraw %}
