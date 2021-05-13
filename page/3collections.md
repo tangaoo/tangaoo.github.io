@@ -76,6 +76,10 @@ type: page
 
    `zlog` 是一个高可靠性、高性能、线程安全、灵活、概念清晰的纯C日志函数库。
 
+* [D-Bus](https://www.freedesktop.org/wiki/Software/dbus/)
+    
+    D-Bus是一个为应用程序间通信的消息总线系统, 用于进程之间的通信。[中文参考](https://thebigdoc.readthedocs.io/en/latest/dbus/dbus.html#id2)
+
 ## other articles
 
 * [将footer固定在页面底部的实现方法](https://segmentfault.com/a/1190000004453249)
