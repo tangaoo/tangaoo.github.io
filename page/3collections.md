@@ -33,6 +33,10 @@ type: page
   
     是一个模块化、跨平台、多线程基准测试工具。[参考链接](https://www.cnblogs.com/chenmh/p/5866058.html)
 
+* zsh
+  
+    shell 工具，比原生好用很多。
+
 ## 工具
 
 
