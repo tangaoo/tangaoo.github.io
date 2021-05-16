@@ -35,7 +35,7 @@ type: page
 
 * zsh
   
-    shell 工具，比原生好用很多。
+    shell 工具，加上Oh My Zsh插件后，比原生好用很多。
 
 ## 工具
 
@@ -84,7 +84,9 @@ type: page
     
     D-Bus是一个为应用程序间通信的消息总线系统, 用于进程之间的通信。[中文参考](https://thebigdoc.readthedocs.io/en/latest/dbus/dbus.html#id2)
 
-    
+* [protobuf-c](https://github.com/protobuf-c)    
+
+    结构化数据序列化与反序列化工具。
 
 ## other articles
 
