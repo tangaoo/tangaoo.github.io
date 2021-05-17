@@ -86,7 +86,7 @@ type: page
 
 * [protobuf-c](https://github.com/protobuf-c)    
 
-    结构化数据序列化与反序列化工具。
+    结构化数据序列化与反序列化工具，需要先安装protobuf。
 
 ## other articles
 
