@@ -128,6 +128,8 @@ Syntax Theme: Atom Dark or One Dark
 
 ## Other blogs
 
+* [Linux内核全景图，可放大缩小，点击跳转代码](https://makelinux.github.io/kernel/map/)
+
 * [金步国作品集](http://www.jinbuguo.com/)
 
 * [阮一峰的个人网站](http://www.ruanyifeng.com/home.html)
