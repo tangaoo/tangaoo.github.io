@@ -88,6 +88,10 @@ type: page
 
     结构化数据序列化与反序列化工具，需要先安装protobuf。
 
+* [ZeroMQ](https://github.com/zeromq)
+
+    是一个基于消息队列的多线程网络库。
+
 ## other articles
 
 * [将footer固定在页面底部的实现方法](https://segmentfault.com/a/1190000004453249)
