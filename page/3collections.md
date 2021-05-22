@@ -39,6 +39,9 @@ type: page
 
 ## 工具
 
+* [ranger](https://ranger.github.io/)
+  
+    ranger is a console file manager with VI key bindings.
 
 * [Kramdown 语法参考](https://kramdown.gettalong.org/quickref.html) 
 
