@@ -179,6 +179,8 @@ Syntax Theme: Atom Dark or One Dark
 
 * [JS前端开发群月报 -豪情等人维护](http://www.kancloud.cn/jsfront/month/82796)
 
+* 数理化--李永乐老师; 英语：兔老师; 中国文学史：欧丽娟老师。西方文学史及美术史：蒋勋老师。当代、现代文学：许子东老师。传统文化：马未都老师
+
 ## Books
 
 * [TLCL(快乐命令行)](http://billie66.github.io/TLCL/book/) 
