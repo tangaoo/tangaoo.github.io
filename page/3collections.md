@@ -37,6 +37,10 @@ type: page
   
     shell 工具，加上Oh My Zsh插件后，比原生好用很多。
 
+* rpcgen
+
+    Linux 原生远程RPC工具。
+
 ## 工具
 
 * [ranger](https://ranger.github.io/)
