@@ -146,6 +146,8 @@ Syntax Theme: Atom Dark or One Dark
 * [阮一峰的个人网站](http://www.ruanyifeng.com/home.html)
 
 * [酷壳](https://coolshell.cn/)
+  
+* [陈浩github io](https://github.com/haoel/haoel.github.io)
 
 * [COLORFUL xiaoa](http://www.xiaoa.name/)
 
