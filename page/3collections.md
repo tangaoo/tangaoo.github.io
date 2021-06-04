@@ -139,6 +139,8 @@ Syntax Theme: Atom Dark or One Dark
 
 ## Other blogs
 
+* [garfileo 的博客，c专家](https://segmentfault.com/u/garfileo)
+
 * [Linux内核全景图，可放大缩小，点击跳转代码](https://makelinux.github.io/kernel/map/)
 
 * [金步国作品集](http://www.jinbuguo.com/)
