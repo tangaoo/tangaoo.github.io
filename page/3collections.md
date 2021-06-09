@@ -139,6 +139,8 @@ Syntax Theme: Atom Dark or One Dark
 
 ## Other blogs
 
+* [Linux IO模式及 select、poll、epoll详解](https://segmentfault.com/a/1190000003063859)
+
 * [garfileo 的博客，c专家](https://segmentfault.com/u/garfileo)
 
 * [Linux内核全景图，可放大缩小，点击跳转代码](https://makelinux.github.io/kernel/map/)
