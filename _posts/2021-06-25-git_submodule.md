@@ -51,7 +51,7 @@ $ git submodule update --remote
 
 * 递归克隆父项目以及子项目。
 ```console
-$ git clone https://github.com/maonx/vimwiki-assets.git assets --recursive 
+$ git clone https://github.com/maonx/vimwiki-assets.git --recursive 
 ```
 
 ## 5. 修改子模块
