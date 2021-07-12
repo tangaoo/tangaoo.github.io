@@ -25,7 +25,7 @@ mathjax: true
 
 ttlib 中有很多自维护数据的容器，比如 vector list 等（补充一句 list_entry 这种是外部维护数据的）。那么这些容器会装哪些数据呢？有 `uint8、int、size_t、long、mem、str、ptr` 类型，所以我们需要抽象成 element 类型（见源码），然后在容器初始化时传入，然后在容器里回调不同的 element 类型。看一下 vector 容器初始化代码。
 
-```C++
+```cpp
 /*! init vector
  *
  * @param grow          the item grow
@@ -62,7 +62,7 @@ static tt_void_t tt_element_uint8_copy(tt_element_ref_t e, tt_pointer_t buff, tt
 ### 2.2 `str` 类型
 `str` 比较特殊，`str` 是字符串指针，外面传进来的 `str` 即可能是动态分配也可能是静态分配（如字符串常量），所以在往容器里传入时，都是重新 duplicate 一次，也就是数据都在 element 内部维护，那么这样在释放时候，统一调用 free即可。看看代码。
 
-```C++
+```cpp
 static tt_void_t tt_element_str_free(tt_element_ref_t e, tt_pointer_t buff)
 {
     /// check
