@@ -42,7 +42,7 @@ tt_vector_ref_t         tt_vector_init(tt_size_t grow, tt_element_t e);
 
 这种纯数据比较简单，数据本身就在容器内部维护了，所以 insert 插入的时候直接就是 copy 拷贝，而 free 的时候直接置0就OK了。看看代码。
 
-```C++
+```cpp
 static tt_void_t tt_element_uint8_free(tt_element_ref_t e, tt_pointer_t buff)
 {
     /// check
