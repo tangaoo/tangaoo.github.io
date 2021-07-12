@@ -25,7 +25,8 @@ mathjax: true
 
 ttlib 中有很多自维护数据的容器，比如 vector list 等（补充一句 list_entry 这种是外部维护数据的）。那么这些容器会装哪些数据呢？有 `uint8、int、size_t、long、mem、str、ptr` 类型，所以我们需要抽象成 element 类型（见源码），然后在容器初始化时传入，然后在容器里回调不同的 element 类型。看一下 vector 容器初始化代码。
 
-```cpp
+
+~~~cpp
 /*! init vector
  *
  * @param grow          the item grow
@@ -34,7 +35,7 @@ ttlib 中有很多自维护数据的容器，比如 vector list 等（补充一�
  * @return              the vector
  */
 tt_vector_ref_t         tt_vector_init(tt_size_t grow, tt_element_t e);
-```
+~~~
 
 ## 2. 不同 data 类型差异
 ### 2.1 `uint8 int size_t long`等类型
