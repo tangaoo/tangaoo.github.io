@@ -20,11 +20,36 @@ mathjax: true
 
 {% raw %}
 
+## 0. C++ 的泛型
+
+这里先扯一句 C++ 的泛型，看一下示例代码：
+
+```cpp
+template<typename T>
+T const & max_element(T const *array, unsigned int n) {
+        T const *max_value = array;
+        for (unsigned int i = 1; i < n; i++) {
+                if (array[i] > *max_value) {
+                        max_value = &(array[i]);
+                }
+        }
+        return *max_value;
+}
+```
+看似泛型 T 可以适应“所有”类型数组的问题，找出最大元素。但有一个最大的问题无法解决，不是所有数据都支持 > 操作符哦。也就是说，想完全的泛型，要把数据以及数据支持的操作都包含进来。element 就是解决这个问题的。
+
+同样，我们看看 c 库是怎么解决这个问题的呢？
+
+```cpp
+void qsort(void *base, size_t nmemb, size_t size,
+                  int (*compar)(const void *, const void *));
+```
 
 ## 1. 为啥抽象 element 模块
 
-ttlib 中有很多自维护数据的容器，比如 vector list 等（补充一句 list_entry 这种是外部维护数据的）。那么这些容器会装哪些数据呢？有 `uint8、int、size_t、long、mem、str、ptr` 类型，所以我们需要抽象成 element 类型（见源码），然后在容器初始化时传入，然后在容器里回调不同的 element 类型。看一下 vector 容器初始化代码。
+有了前面的铺垫，这个问题答案是显而易见的了。
 
+ttlib 中有很多自维护数据的容器，比如 vector list 等（补充一句 list_entry 这种是外部维护数据的）。那么这些容器会装哪些数据呢？有 `uint8、int、size_t、long、mem、str、ptr` 类型，所以我们需要抽象成 element 类型（详见源码），把数据与数据支持的操作封装起来，泛型化。然后在容器初始化时传入，实现在容器操作中根据不同数据类型回调对应的数据操作方法。下面看一下 vector 容器初始化代码：
 
 ~~~cpp
 /*! init vector
@@ -96,7 +121,10 @@ static tt_void_t tt_element_str_dupl(tt_element_ref_t e, tt_pointer_t buff, tt_c
 
 ## 3. element 接口说明
 
-如上面 tt_element_str_dupl 接口所示，element 接口大多都有 buff、data 形参，buff 是存储 element 的 buff，永远都是地址，而 data 就是 data，例如 `uint8、int、size_t、long、mem、str、ptr`。
+* data 有很多种，所以统一抽象成 void* 类似，然后在各自函数内部强转。
+
+* 如上面 tt_element_str_dupl 接口所示，element 接口大多都有 buff、data 形参，buff 是存储 element 的 buff，永远都是地址，而 data 就是 data，例如 `uint8、int、size_t、long、mem、str、ptr`。但是实际上都会抽象成 void* 类型。
+
 
 
 
