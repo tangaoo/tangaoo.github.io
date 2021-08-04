@@ -139,6 +139,8 @@ Syntax Theme: Atom Dark or One Dark
 
 ## Other blogs
 
+* [非常不错的编程技术教程](https://coolshell.cn/articles/240.html)
+
 * [101 种设计模式](https://sourcemaking.com/design-patterns-and-tips)
 
 * [Linux IO模式及 select、poll、epoll详解](https://segmentfault.com/a/1190000003063859)
