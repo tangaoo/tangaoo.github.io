@@ -69,6 +69,7 @@ Raspbarry Pi 开箱指南记录。
 
 * [官方内核编译参考](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
 * [参考链接](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
+* 在树莓派 boot 盘的 config.txt 文件中可以配置选择内核。目前用的是 4.19.71-rt24-v7l+ 版本。
 
 ## 7. 打实时补丁
 
