@@ -7,7 +7,7 @@
 
 # Site settings
 title: Tangaoo
-brief-intro: Embedded Software Engineer
+brief-intro: an embedded software engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tangaoo.github.io" # the base hostname & protocol for your site
 
