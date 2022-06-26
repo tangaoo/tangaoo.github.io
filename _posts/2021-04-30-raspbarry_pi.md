@@ -31,7 +31,7 @@ Raspbarry Pi 开箱指南记录。
 ## 3. 配置 SSH连接（无屏幕）
 ### 3.1 有网线直连(静态连接)
 
-* 找到 SD卡 boot目录下面cmdline.txt。添加“ip=xxxx.xxxx.xxxx.xxxx”
+* 网线连接路由器即可，会自动分配ip。
 
 ### 3.2 无线连接（有路由器）
 
@@ -49,9 +49,16 @@ Raspbarry Pi 开箱指南记录。
     }
   ```
 
-### 3.3 开启 ssh
+### 3.3 获取 raspberrypi 的ip
+* 登陆路由器后台，即可获取到接入设备的ip。
+* 或者在PC机上执行 `arp -a` 扫描网段上所有设备，此时把 raspberrypi 开关机一次即可判断出其ip。
 
-* 在 boot目录下，新建一个文件，命名为 ssh 即可。
+### 3.4 开启 ssh
+
+* 在 boot 目录下，新建一个文件，命名为 ssh 即可，默认用户名 pi，密码 raspberry。
+```shell
+ssh pi@192.168.3.200
+```
 
 ## 4. 基本配置（命令行）
 
